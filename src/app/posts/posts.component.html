@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center">
+    <h1>Posts</h1>
+  </div>
+<div class="d-flex justify-content-center">
+  <ag-grid-angular
+    style="width: 830px; height: 500px;"
+    class="ag-theme-balham d-flex justify-content-center"
+    rowSelection='single'
+    [suppressCellSelection]=true
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    (rowClicked)="postSelected($event)">
+  </ag-grid-angular>
+
+</div>\
+<app-modal id="postModal">
+    <h1>Post</h1>
+    <h4>Content: {{selectedPostContent}}</h4>
+    <button class="btn btn-primary" (click)="closeModal('postModal');"  data-dismiss="true">Close</button>
+  </app-modal>
+
+

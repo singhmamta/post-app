@@ -8,8 +8,7 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
+import { ModalComponent } from './common/components/modal/modal.component';
     AppRoutingModule
   ],
   providers: [],
